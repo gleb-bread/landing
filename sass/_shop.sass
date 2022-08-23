@@ -1,0 +1,76 @@
+.shop
+    padding: 50px
+    background: -webkit-linear-gradient(180deg, rgb(232, 231, 229), rgb(196, 180, 167))
+    background: -moz-linear-gradient(180deg, rgb(232, 231, 229), rgb(196, 180, 167))
+    background: linear-gradient(180deg, rgb(232, 231, 229), rgb(196, 180, 167))
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__title
+        margin-bottom: 30px
+        &>h2
+            font-family: $fontFamily
+            font-size: 40px
+            color: $dark
+    &__product
+        display: flex
+        flex-direction: column
+        align-items: center
+        border: 3px solid $dark
+        border-radius: 20px
+        padding: 20px
+        width: 300px
+        background-color: #E8E7E5
+        &__title
+            &>h2
+                font-size: 30px
+                text-align: center
+                color: $dark
+                font-weight: 600
+        &__icon
+            height: 400px
+            width: 100%
+            background-image: url('../style/img/product_1jpg.jpg')
+            background-size: cover
+            background-position: center
+            border-radius: 20px
+            margin-bottom: 20px
+        &__counter
+            display: flex
+            justify-content: center
+            margin-bottom: 5px
+            &__neg
+                display: block
+                margin-bottom: 10px
+                background-color: #E8E7E5
+                font-size: 30px
+                border: 3px solid $dark
+                border-radius: 7px
+            &__value
+                display: block
+                margin: 0 10px 10px 10px
+                text-align: center
+                background-color: #E8E7E5
+                border: 3px solid $dark
+                border-radius: 7px
+                font-size: 30px
+                width: 50%
+            &__pos
+                display: block
+                margin-bottom: 10px
+                background-color: #E8E7E5
+                font-size: 30px
+                border: 3px solid $dark
+                border-radius: 7px
+        &__get
+            background-color: #E8E7E5
+            font-size: 20px
+            border: 3px solid $dark
+            border-radius: 7px
+            font-family: $fontFamily
+            padding: 5px
+        &__price
+            font-size: 30px
+            font-family: $fontFamily
+            color: $dark
+            margin-bottom: 10px

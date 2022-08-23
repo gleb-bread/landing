@@ -1,5 +1,8 @@
 @import "variables"
 .positive-list
+    background: -webkit-linear-gradient(180deg, rgb(243, 246, 251), rgb(232, 231, 229))
+    background: -moz-linear-gradient(180deg, rgb(243, 246, 251), rgb(232, 231, 229))
+    background: linear-gradient(180deg, rgb(243, 246, 251), rgb(232, 231, 229))
     &__block
         width: 70%
         display: flex
@@ -8,7 +11,7 @@
         padding: 100px
         flex-wrap: wrap
     &__border
-        border: 4px solid $light
+        border: 4px solid $dark
         border-radius: 20px
         width: 300px
         padding: 50px
@@ -21,11 +24,11 @@
         justify-content: start
         align-items: center
         font-family: $fontFamily
-        color: $light
+        color: $dark
         text-align: center
     &__icon
         align-self: center
-        fill: $light
+        fill: $dark
     &__title
         font-size: 25px
         font-weight: 700
@@ -43,4 +46,4 @@
                 text-align: center
                 font-size: 40px
                 font-family: $fontFamily
-                color: $light
+                color: $dark
