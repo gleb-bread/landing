@@ -1,5 +1,5 @@
 body {
-  background-color: #F3F6FB;
+  background-color: #5A3F2E;
   margin: 0;
   padding: 0;
 }
@@ -31,6 +31,10 @@ body {
 .menu__link {
   color: #5A3F2E;
   text-decoration: none;
+}
+
+header {
+  background-color: #F3F6FB;
 }
 
 .hero__block {
@@ -66,4 +70,58 @@ body {
 }
 .hero__text > p {
   margin: 0;
+}
+
+.positive-list__block {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding: 100px;
+  flex-wrap: wrap;
+}
+.positive-list__border {
+  border: 4px solid #F3F6FB;
+  border-radius: 20px;
+  width: 300px;
+  padding: 50px;
+}
+.positive-list__icon {
+  width: 100px;
+  height: 100px;
+}
+.positive-list__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  font-family: "Roboto Slab", sans-serif;
+  color: #F3F6FB;
+  text-align: center;
+}
+.positive-list__icon {
+  align-self: center;
+  fill: #F3F6FB;
+}
+.positive-list__title {
+  font-size: 25px;
+  font-weight: 700;
+  margin-block: 15px;
+}
+.positive-list__title > h2 {
+  margin: 0;
+  font-size: 25px;
+}
+.positive-list__text {
+  font-size: 20px;
+}
+.positive-list__title-b {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.positive-list__title-b > h2 {
+  text-align: center;
+  font-size: 40px;
+  font-family: "Roboto Slab", sans-serif;
+  color: #F3F6FB;
 }/*# sourceMappingURL=index.css.map */
