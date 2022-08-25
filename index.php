@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+    include "server/connetion.php";
+    $result = mysqli_query($induction, "SELECT * FROM `product_shop`");
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -117,21 +122,28 @@
         <div class="shop__title">
             <h2>Наши товары</h2>
         </div>
-        <div class="shop__product">
-            <div class="shop__product__title">
-                <h2>Стул-кресло</h2>
+        <div class="shop__product__block">
+            <?php
+                while ($product = mysqli_fetch_assoc($result)){
+                    
+            ?>
+            <div class="shop__product">
+                <div class="shop__product__title">
+                    <h2><?php echo $product['name'];?></h2>
+                </div>
+                <div class="shop__product__icon" style = "background-image: url('<?php echo $product['photo_product'];?>')">
+                </div>
+                <div class="shop__product__counter">
+                    <input type="button" value=" - " class="shop__product__counter__neg">
+                    <input type="number" name="" value="0" id="" readonly="readonly" class="shop__product__counter__value">
+                    <input type="button" value="+" class="shop__product__counter__pos">
+                </div>
+                <div class="shop__product__price">
+                    <span><?php echo $product['price'];?></span>
+                </div>
+                <input type="button" value="Добавить в корзину" class="shop__product__get">
             </div>
-            <div class="shop__product__icon">
-            </div>
-            <div class="shop__product__counter">
-                <input type="button" value=" - " class="shop__product__counter__neg">
-                <input type="number" name="" value="0" id="" readonly="readonly" class="shop__product__counter__value">
-                <input type="button" value="+" class="shop__product__counter__pos">
-            </div>
-            <div class="shop__product__price">
-                <span>4000р</span>
-            </div>
-            <input type="button" value="Добавить в корзину" class="shop__product__get">
+            <?php }?>
         </div>
     </section>
     <script src="js/script.js"></script>

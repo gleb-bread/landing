@@ -173,6 +173,13 @@ header {
   padding: 20px;
   width: 300px;
   background-color: #E8E7E5;
+  margin-bottom: 30px;
+}
+.shop__product__block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 70%;
 }
 .shop__product__title > h2 {
   font-size: 30px;
