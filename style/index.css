@@ -240,4 +240,132 @@ header {
   font-family: "Roboto Slab", sans-serif;
   color: #5A3F2E;
   margin-bottom: 10px;
+}
+
+.contact {
+  background: -webkit-linear-gradient(180deg, rgb(196, 180, 167), rgb(175, 137, 136));
+  background: -moz-linear-gradient(180deg, rgb(196, 180, 167), rgb(175, 137, 136));
+  background: linear-gradient(180deg, rgb(196, 180, 167), rgb(175, 137, 136));
+  padding: 150px;
+}
+.contact__block {
+  display: flex;
+  flex-direction: column;
+}
+.contact__btn {
+  width: 300px;
+  font-size: 30px;
+  background-color: #5A3F2E;
+  color: #F3F6FB;
+  border: 3px solid #5A3F2E;
+  border-radius: 20px;
+  padding: 5px 15px;
+  resize: none;
+  align-self: center;
+}
+.contact__btn:active, .contact__btn:hover, .contact__btn:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+.contact__titile > h2 {
+  text-align: center;
+  color: #F3F6FB;
+  font-size: 40px;
+  font-family: "Roboto Slab", sans-serif;
+}
+.contact__form__title {
+  font-size: 35px;
+  font-family: "Roboto Slab", sans-serif;
+  color: #F3F6FB;
+  display: block;
+}
+.contact__form__input {
+  width: 500px;
+  font-size: 30px;
+  background-color: #F3F6FB;
+  color: #5A3F2E;
+  border: 3px solid #5A3F2E;
+  border-radius: 20px;
+  padding: 5px 15px;
+}
+.contact__form__input:active, .contact__form__input:hover, .contact__form__input:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+.contact__form__textarea {
+  width: 500px;
+  font-size: 30px;
+  background-color: #F3F6FB;
+  color: #5A3F2E;
+  border: 3px solid #5A3F2E;
+  border-radius: 20px;
+  padding: 5px 15px;
+  resize: none;
+}
+.contact__form__textarea:active, .contact__form__textarea:hover, .contact__form__textarea:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+.contact__form__text {
+  margin-bottom: 30px;
+}
+
+.adress {
+  background: -webkit-linear-gradient(180deg, rgb(175, 137, 136), rgb(90, 63, 46));
+  background: -moz-linear-gradient(180deg, rgb(175, 137, 136), rgb(90, 63, 46));
+  background: linear-gradient(180deg, rgb(175, 137, 136), rgb(90, 63, 46));
+  padding: 100px;
+}
+.adress__block {
+  display: flex;
+  justify-content: space-around;
+}
+.adress__title > h2 {
+  text-align: center;
+  color: #F3F6FB;
+  font-size: 40px;
+  font-family: "Roboto Slab", sans-serif;
+}
+.adress__list {
+  color: #F3F6FB;
+  font-family: "Roboto Slab", sans-serif;
+}
+.adress__list__item {
+  font-size: 15px;
+}
+.adress__list__title {
+  font-size: 25px;
+}
+.adress__list-tel {
+  margin-bottom: 10px;
+  padding: 0;
+  list-style: none;
+  font-family: "Roboto Slab", sans-serif;
+  color: #F3F6FB;
+}
+.adress__list__links {
+  display: block;
+  font-size: 25px;
+  color: #F3F6FB;
+  font-family: "Roboto Slab", sans-serif;
+}
+.adress__list__links__icons {
+  width: 300px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.adress__list__links__icons > svg {
+  width: 25px;
+  height: 25px;
+  fill: #F3F6FB;
+}
+.adress__path-2 > iframe {
+  width: 900px;
+  border-radius: 20px;
+  height: 400px;
+}
+.adress__cart {
+  color: #F3F6FB;
+  font-family: "Roboto Slab", sans-serif;
 }/*# sourceMappingURL=index.css.map */
