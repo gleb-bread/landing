@@ -20,25 +20,27 @@
 
 <body>
     <header>
-        <div class="menu">
-            <div class="menu__logo">
-                <img src="style/img/logo.png" alt="" class="menu__logo__png">
+        <div class="menu__block">
+            <div class="menu">
+                <div class="menu__logo">
+                    <img src="style/img/logo.png" alt="" class="menu__logo__png">
+                </div>
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="#au" class="menu__link">О нас</a></li>
+                    <li class="menu__item"><a href="#prod" class="menu__link">Товары</a></li>
+                    <li class="menu__item"><a href="#contact" class="menu__link">Связь</a></li>
+                    <li class="menu__item"><a href="#adres" class="menu__link">Адрес</a></li>
+                </ul>
             </div>
-            <ul class="menu__list">
-                <li class="menu__item"><a href="" class="menu__link">О нас</a></li>
-                <li class="menu__item"><a href="" class="menu__link">Товары</a></li>
-                <li class="menu__item"><a href="" class="menu__link">Свяжитесь с нами</a></li>
-                <li class="menu__item"><a href="" class="menu__link">Адрес</a></li>
-            </ul>
+            <div class="menu__basket">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path
+                        d="M171.7 191.1H404.3L322.7 35.07C316.6 23.31 321.2 8.821 332.9 2.706C344.7-3.409 359.2 1.167 365.3 12.93L458.4 191.1H544C561.7 191.1 576 206.3 576 223.1C576 241.7 561.7 255.1 544 255.1L492.1 463.5C484.1 492 459.4 512 430 512H145.1C116.6 512 91 492 83.88 463.5L32 255.1C14.33 255.1 0 241.7 0 223.1C0 206.3 14.33 191.1 32 191.1H117.6L210.7 12.93C216.8 1.167 231.3-3.409 243.1 2.706C254.8 8.821 259.4 23.31 253.3 35.07L171.7 191.1zM191.1 303.1C191.1 295.1 184.8 287.1 175.1 287.1C167.2 287.1 159.1 295.1 159.1 303.1V399.1C159.1 408.8 167.2 415.1 175.1 415.1C184.8 415.1 191.1 408.8 191.1 399.1V303.1zM271.1 303.1V399.1C271.1 408.8 279.2 415.1 287.1 415.1C296.8 415.1 304 408.8 304 399.1V303.1C304 295.1 296.8 287.1 287.1 287.1C279.2 287.1 271.1 295.1 271.1 303.1zM416 303.1C416 295.1 408.8 287.1 400 287.1C391.2 287.1 384 295.1 384 303.1V399.1C384 408.8 391.2 415.1 400 415.1C408.8 415.1 416 408.8 416 399.1V303.1z" />
+                </svg>
         </div>
-        <div class="menu__basket">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                <path
-                    d="M171.7 191.1H404.3L322.7 35.07C316.6 23.31 321.2 8.821 332.9 2.706C344.7-3.409 359.2 1.167 365.3 12.93L458.4 191.1H544C561.7 191.1 576 206.3 576 223.1C576 241.7 561.7 255.1 544 255.1L492.1 463.5C484.1 492 459.4 512 430 512H145.1C116.6 512 91 492 83.88 463.5L32 255.1C14.33 255.1 0 241.7 0 223.1C0 206.3 14.33 191.1 32 191.1H117.6L210.7 12.93C216.8 1.167 231.3-3.409 243.1 2.706C254.8 8.821 259.4 23.31 253.3 35.07L171.7 191.1zM191.1 303.1C191.1 295.1 184.8 287.1 175.1 287.1C167.2 287.1 159.1 295.1 159.1 303.1V399.1C159.1 408.8 167.2 415.1 175.1 415.1C184.8 415.1 191.1 408.8 191.1 399.1V303.1zM271.1 303.1V399.1C271.1 408.8 279.2 415.1 287.1 415.1C296.8 415.1 304 408.8 304 399.1V303.1C304 295.1 296.8 287.1 287.1 287.1C279.2 287.1 271.1 295.1 271.1 303.1zM416 303.1C416 295.1 408.8 287.1 400 287.1C391.2 287.1 384 295.1 384 303.1V399.1C384 408.8 391.2 415.1 400 415.1C408.8 415.1 416 408.8 416 399.1V303.1z" />
-            </svg>
         </div>
     </header>
-    <section class="hero">
+    <section class="hero" id = "au">
         <div class="hero__block">
             <div class="hero__filter">
                 <div class="hero__description">
@@ -118,7 +120,7 @@
             </div>
         </div>
     </section>
-    <section class="shop">
+    <section class="shop" id = "prod">
         <div class="shop__title">
             <h2>Наши товары</h2>
         </div>
@@ -146,7 +148,7 @@
             <?php }?>
         </div>
     </section>
-    <section class="contact">
+    <section class="contact" id = "contact">
         <div class="contact__block">
             <div class="contact__titile">
                 <h2>Оставьте свой отзыв</h2>
@@ -164,7 +166,7 @@
             </form>
         </div>
     </section>
-    <section class="adress">
+    <section class="adress" id = "adres">
         <div class="adress__title">
             <h2>Наши контакты</h2>
         </div>
@@ -198,8 +200,7 @@
             </div>
         </div>
     </section>
-    <script src="js/script.js"></script>
-    <script src="https://kit.fontawesome.com/24e4b4339a.js" crossorigin="anonymous"></script>
+    <script src="js/_menu.js"></script>
 </body>
 
 </html>
