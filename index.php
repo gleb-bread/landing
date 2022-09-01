@@ -138,7 +138,7 @@
                 </div>
                 <div class="shop__product__counter">
                     <input type="button" value=" - " class="shop__product__counter__neg">
-                    <input type="number" name="" value="0" id="" readonly="readonly" class="shop__product__counter__value">
+                    <input type="number" data-max-value = "<?php echo $product['all_quantity']?>" name="" value="0" id="" readonly="readonly" class="shop__product__counter__value">
                     <input type="button" value="+" class="shop__product__counter__pos">
                 </div>
                 <div class="shop__product__price">
