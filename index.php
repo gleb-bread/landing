@@ -4,6 +4,7 @@
 <?php
     include "server/connetion.php";
     $result = mysqli_query($induction, "SELECT * FROM `product_shop`");
+    $comment = mysqli_query($induction, "SELECT * FROM `comments`");
 ?>
 
 <head>
@@ -165,6 +166,22 @@
                 <input type="button" value="Отправить" class = "contact__btn">
             </form>
         </div>
+        <div class="comment__block">
+            <?php
+                    while ($comment__arr = mysqli_fetch_assoc($comment)){
+                        
+                ?>
+            <div class="comment">
+                <div class="comment__avatar">
+                    <span class="comment__avatar__name"><?php echo $comment__arr['name']?></span>
+                    <img src="<?php echo $comment__arr['photo']?>" alt="" class="comment__avatar__photo">
+                </div>
+                <p class="comment__text">
+                <?php echo $comment__arr['comment']?>
+                </p>
+            </div>
+            <?php } ?>
+        </div>
     </section>
     <section class="adress" id = "adres">
         <div class="adress__title">
@@ -201,6 +218,7 @@
         </div>
     </section>
     <script src="js/_menu.js"></script>
+    <script src="js/_shop.js"></script>
 </body>
 
 </html>

@@ -269,10 +269,13 @@ header {
   background: -moz-linear-gradient(180deg, rgb(196, 180, 167), rgb(175, 137, 136));
   background: linear-gradient(180deg, rgb(196, 180, 167), rgb(175, 137, 136));
   padding: 150px;
+  display: flex;
+  align-items: start;
 }
 .contact__block {
   display: flex;
   flex-direction: column;
+  margin-right: 150px;
 }
 .contact__btn {
   width: 300px;
@@ -330,6 +333,36 @@ header {
 }
 .contact__form__text {
   margin-bottom: 30px;
+}
+
+.comment {
+  display: flex;
+  margin-bottom: 20px;
+  background-color: #F3F6FB;
+  font-size: 19px;
+  font-family: "Roboto Slab", sans-serif;
+  border-radius: 20px;
+  padding: 30px;
+  color: #5A3F2E;
+}
+.comment__block {
+  box-sizing: border-box;
+}
+.comment__avatar {
+  display: flex;
+  flex-direction: column;
+  margin-right: 35px;
+}
+.comment__avatar__name {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.comment__avatar__photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
 .adress {

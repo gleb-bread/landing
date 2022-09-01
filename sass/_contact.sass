@@ -3,9 +3,12 @@
     background: -moz-linear-gradient(180deg, rgb(196, 180, 167), rgb(175, 137, 136))
     background: linear-gradient(180deg, rgb(196, 180, 167), rgb(175, 137, 136))
     padding: 150px
+    display: flex
+    align-items: start
     &__block
         display: flex
         flex-direction: column
+        margin-right: 150px
     &__btn
         width: 300px
         font-size: 30px
@@ -55,3 +58,27 @@
                 outline-offset: 0
         &__text
             margin-bottom: 30px
+.comment
+    display: flex
+    margin-bottom: 20px
+    background-color: $light
+    font-size: 19px
+    font-family: $fontFamily
+    border-radius: 20px
+    padding: 30px
+    color: $dark
+    &__block
+        box-sizing: border-box
+    &__avatar
+        display: flex
+        flex-direction: column
+        margin-right: 35px
+        &__name
+            text-align: center
+            font-size: 30px
+            font-weight: 700
+            margin-bottom: 10px
+        &__photo
+            width: 100px
+            height: 100px
+            border-radius: 50%
