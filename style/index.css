@@ -780,6 +780,10 @@ header {
   .shop__product {
     width: 180px;
   }
+  .shop__product__get-dt {
+    width: 200px;
+    font-size: 15px;
+  }
   .shop__product__block {
     width: 768px;
   }
@@ -850,8 +854,9 @@ header {
   .shop__product__price > span {
     font-size: 15px;
   }
-  .shop__product__get {
-    font-size: 13px;
+  .shop__product__get-dt {
+    width: 175px;
+    font-size: 15px;
   }
   .contact {
     padding: 25px;
@@ -1002,7 +1007,7 @@ header {
     background-color: #FFFFFF;
   }
   .comment {
-    width: 580px;
+    width: 540px;
   }
   .comment__block {
     display: none;
@@ -1010,26 +1015,29 @@ header {
   .comment__carusel {
     display: flex;
   }
+  .contact__block {
+    width: 540px;
+  }
   .contact__titile > h2 {
     font-size: 30px;
   }
   .contact__form {
-    width: 580px;
+    width: 540px;
   }
   .contact__form__text {
-    width: 580px;
+    width: 540px;
   }
   .contact__form__textarea {
-    width: 580px;
+    width: 530px;
   }
   .contact__form__title {
     font-size: 30px;
   }
   #adres > div.adress__block > div.adress__path-2 > iframe {
-    width: 580px;
+    width: 540px;
   }
   .adress__block {
-    width: 580px;
+    width: 540px;
   }
 }
 @media (max-width: 680px) {
@@ -1150,5 +1158,186 @@ header {
     width: 420px;
     justify-content: start;
     margin: auto;
+  }
+}
+@media (max-width: 540px) {
+  .comment {
+    width: 380px;
+  }
+}
+@media (max-width: 480px) {
+  .menu__logo > span {
+    font-size: 25px;
+  }
+  .hero {
+    background-size: 480px;
+    background-position-x: 45%;
+  }
+  .hero__block {
+    width: 350px;
+    height: 320px;
+  }
+  .hero__description {
+    width: 350px;
+  }
+  .positive-list__block {
+    width: 350px;
+    padding: 20px 0;
+  }
+  .positive-list__title-b {
+    margin-bottom: 10px;
+  }
+  .positive-list__border {
+    width: 350px;
+  }
+  .shop {
+    padding: 0;
+  }
+  .shop__title {
+    margin-bottom: 10px;
+  }
+  .shop__product {
+    width: 350px;
+  }
+  .shop__product__block {
+    width: 350px;
+  }
+  .shop__product__block-1 {
+    width: 150px;
+  }
+  .shop__product__block-2 {
+    width: 150px;
+  }
+  .shop__product__get-mb {
+    width: 140px;
+    font-size: 12px;
+  }
+  .comment {
+    width: 270px;
+  }
+  .contact__form {
+    width: 350px;
+  }
+  .contact__form__name {
+    width: 350px;
+  }
+  .contact__form__text {
+    width: 350px;
+  }
+  .contact__form__textarea {
+    width: 200px;
+    font-size: 12px;
+  }
+  .contact__form__input {
+    font-size: 12px;
+  }
+  #adres > div.adress__block > div.adress__path-2 > iframe {
+    width: 320px;
+  }
+  .adress__block {
+    width: 350px;
+  }
+  .adress__path-2 {
+    width: 350px;
+    margin: auto;
+  }
+  .adress__path-1 {
+    box-sizing: border-box;
+    width: 350px;
+    margin: 0;
+  }
+}
+@media (max-width: 380px) {
+  .hero {
+    background-size: cover;
+    background-position-x: 45%;
+  }
+  .hero__block {
+    width: 250px;
+    height: 440px;
+  }
+  .hero__description {
+    width: 250px;
+  }
+  .positive-list__block {
+    width: 250px;
+    padding: 20px 0;
+  }
+  .positive-list__title-b {
+    margin-bottom: 10px;
+  }
+  .positive-list__title > h2 {
+    font-size: 15px;
+  }
+  .positive-list__border {
+    width: 250px;
+    padding: 20px 0 0 0;
+  }
+  .shop {
+    padding: 0;
+  }
+  .shop__title {
+    margin-bottom: 10px;
+  }
+  .shop__product {
+    width: 250px;
+  }
+  .shop__product__title > h2 {
+    font-size: 15px;
+  }
+  .shop__product__block {
+    width: 250px;
+  }
+  .shop__product__block-1 {
+    width: 100px;
+  }
+  .shop__product__block-2 {
+    width: 100px;
+  }
+  .shop__product__get-mb {
+    width: 90px;
+    font-size: 7px;
+  }
+  .comment {
+    width: 200px;
+    box-sizing: border-box;
+  }
+  .comment__avatar {
+    margin-right: 5px;
+    padding: 5px;
+  }
+  .contact__block {
+    width: 250px;
+  }
+  .contact__form {
+    width: 250px;
+  }
+  .contact__form__name {
+    width: 250px;
+  }
+  .contact__form__text {
+    width: 250px;
+  }
+  .contact__form__textarea {
+    width: 100px;
+    font-size: 12px;
+  }
+  .contact__form__input {
+    font-size: 12px;
+  }
+  #adres > div.adress__block > div.adress__path-2 > iframe {
+    width: 250px;
+  }
+  .adress__block {
+    width: 250px;
+  }
+  .adress__path-2 {
+    width: 250px;
+    margin: auto;
+  }
+  .adress__path-1 {
+    box-sizing: border-box;
+    width: 250px;
+    margin: 0;
   }
 }/*# sourceMappingURL=index.css.map */

@@ -2,11 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
     let karusel = document.getElementsByClassName('comment__carusel')[0];
     let karuselItems = document.getElementsByClassName('comment__carusel__item');
     let leftStart = (document.documentElement.clientWidth - document.documentElement.clientWidth * 2) + 'px';
-    let leftShow = Math.ceil((document.documentElement.clientWidth / 8)) + 'px';
+    let leftShow = Math.floor(document.getElementsByClassName('shop__product')[3].getBoundingClientRect().left) + 'px';
     let leftEnd = (document.documentElement.clientWidth * 2) + 'px';
     let coords = [leftEnd, leftShow, leftStart];
     let startComment = 0;
     let mouseDownResult = false;
+
 
     karusel.style.width = document.documentElement.clientWidth + 'px';
     karusel.style.height = (karuselItems[2].getBoundingClientRect().height + 30) + 'px';

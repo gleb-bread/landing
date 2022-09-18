@@ -98,14 +98,26 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     menuBtnOpen.onclick = () => {
-        menuBlock.style.transitionDuration = ".3s";
-        menuBlock.style.transitionProperty = "width, height";
-        menuBlock.style.width = "30%";
-        menuBlock.style.height = "100%";
-        menuBlock.style.left = `${(document.documentElement.clientWidth - Math.ceil(document.documentElement.clientWidth * .3)) + 1}px`;
-        menuBlock_1.style.display = "none";
-        menuButton.style.display = "block";
-        menuBlock.style.alignItems = "start";
-        menuBlock.style.padding = "0";
+        if (document.documentElement.width > 480) {
+            menuBlock.style.transitionDuration = ".3s";
+            menuBlock.style.transitionProperty = "width, height";
+            menuBlock.style.width = "30%";
+            menuBlock.style.height = "100%";
+            menuBlock.style.left = `${(document.documentElement.clientWidth - Math.ceil(document.documentElement.clientWidth * .3)) + 1}px`;
+            menuBlock_1.style.display = "none";
+            menuButton.style.display = "block";
+            menuBlock.style.alignItems = "start";
+            menuBlock.style.padding = "0";
+        } else {
+            menuBlock.style.transitionDuration = ".3s";
+            menuBlock.style.transitionProperty = "width, height";
+            menuBlock.style.width = "50%";
+            menuBlock.style.height = "100%";
+            menuBlock.style.left = `${(document.documentElement.clientWidth - Math.ceil(document.documentElement.clientWidth * .5)) + 1}px`;
+            menuBlock_1.style.display = "none";
+            menuButton.style.display = "block";
+            menuBlock.style.alignItems = "start";
+            menuBlock.style.padding = "0";
+        }
     }
 });
