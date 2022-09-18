@@ -172,9 +172,9 @@ header {
   margin-top: 40px;
 }
 .hero__filter {
-  background: -webkit-linear-gradient(180deg, rgba(243, 246, 251, 0.9), rgba(243, 246, 251, 0.2));
-  background: -moz-linear-gradient(180deg, rgba(243, 246, 251, 0.9), rgba(243, 246, 251, 0.2));
-  background: linear-gradient(180deg, rgba(243, 246, 251, 0.9), rgba(243, 246, 251, 0.2));
+  background: -webkit-linear-gradient(180deg, rgba(243, 246, 251, 0.9), rgba(243, 246, 251, 0.5));
+  background: -moz-linear-gradient(180deg, rgba(243, 246, 251, 0.9), rgba(243, 246, 251, 0.5));
+  background: linear-gradient(180deg, rgba(243, 246, 251, 0.9), rgba(243, 246, 251, 0.5));
   height: 100%;
   display: flex;
   align-items: center;
@@ -190,11 +190,16 @@ header {
   padding: 0 100px;
   text-align: center;
 }
+.hero__title {
+  margin-bottom: 20px;
+}
 .hero__title > h2 {
   margin: 0;
   margin-block: 0;
 }
 .hero__text > p {
+  text-align: justify;
+  text-indent: 5%;
   margin: 0;
 }
 
@@ -471,6 +476,10 @@ header {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+}
+.comment__text {
+  text-align: justify;
+  text-indent: 5%;
 }
 .comment__carusel {
   display: none;
@@ -929,9 +938,9 @@ header {
     width: 540px;
   }
   .hero__filter {
-    background: -webkit-linear-gradient(180deg, rgba(243, 246, 251, 0.9), rgba(243, 246, 251, 0.4));
-    background: -moz-linear-gradient(180deg, rgba(243, 246, 251, 0.9), rgba(243, 246, 251, 0.4));
-    background: linear-gradient(180deg, rgba(243, 246, 251, 0.9), rgba(243, 246, 251, 0.4));
+    background: -webkit-linear-gradient(180deg, rgba(243, 246, 251, 0.9), rgba(243, 246, 251, 0.7));
+    background: -moz-linear-gradient(180deg, rgba(243, 246, 251, 0.9), rgba(243, 246, 251, 0.7));
+    background: linear-gradient(180deg, rgba(243, 246, 251, 0.9), rgba(243, 246, 251, 0.7));
   }
   .positive-list__block {
     flex-direction: column;
@@ -1042,7 +1051,7 @@ header {
 }
 @media (max-width: 680px) {
   .hero {
-    background-size: 100%;
+    background-size: cover;
     background-position-y: 0;
   }
   .hero__block {
@@ -1052,6 +1061,9 @@ header {
   }
   .hero__description {
     width: 450px;
+  }
+  .hero__title {
+    margin-bottom: 10px;
   }
   .hero__title > h2 {
     font-size: 20px;
@@ -1170,12 +1182,11 @@ header {
     font-size: 25px;
   }
   .hero {
-    background-size: 480px;
     background-position-x: 45%;
   }
   .hero__block {
     width: 350px;
-    height: 320px;
+    height: 340px;
   }
   .hero__description {
     width: 350px;
