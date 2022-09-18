@@ -26,7 +26,9 @@
             display: flex
             flex-wrap: wrap
             justify-content: space-between
-            width: 70%
+            width: 1200px
+            &-1
+                width: 100%
         &__title
             &>h2
                 font-size: 30px
@@ -36,7 +38,6 @@
         &__icon
             height: 400px
             width: 100%
-            background-image: url('../style/img/product_1jpg.jpg')
             background-size: cover
             background-position: center
             border-radius: 20px
@@ -62,6 +63,7 @@
                 border-radius: 7px
                 font-size: 30px
                 width: 50%
+                color: $dark
             &__pos
                 display: block
                 margin-bottom: 10px
@@ -70,15 +72,21 @@
                 border: 3px solid $dark
                 border-radius: 7px
                 cursor: pointer
-        &__get
+        &__get-dt,&__get-mb
             background-color: #E8E7E5
             font-size: 20px
             border: 3px solid $dark
             border-radius: 7px
             font-family: $fontFamily
             padding: 5px
+        &__get-mb
+            display: none
         &__price
             font-size: 30px
             font-family: $fontFamily
             color: $dark
             margin-bottom: 10px
+            text-align: center
+#prod > div.shop__product__block > div:nth-child(1) > div.shop__product__block-1 > div.shop__product__icon
+    background-color: #FFFFFF
+    background-size: 78%

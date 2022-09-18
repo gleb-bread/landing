@@ -3,13 +3,17 @@
     background: -moz-linear-gradient(180deg, rgb(196, 180, 167), rgb(175, 137, 136))
     background: linear-gradient(180deg, rgb(196, 180, 167), rgb(175, 137, 136))
     padding: 150px
-    display: flex
-    align-items: start
+    overflow: hidden
+    &__container
+        display: flex
+        align-items: start
+        margin: auto
     &__block
         display: flex
         flex-direction: column
         margin-right: 150px
     &__btn
+        font-family: $fontFamily
         width: 300px
         font-size: 30px
         background-color: $dark
@@ -82,3 +86,10 @@
             width: 100px
             height: 100px
             border-radius: 50%
+    &__carusel
+        display: none
+        position: relative
+        height: 300px
+        &__item
+            width: 100%
+            position: absolute

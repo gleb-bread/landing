@@ -3,8 +3,10 @@
 
 <?php
     include "server/connetion.php";
+    include "server/addProduct.php";
     $result = mysqli_query($induction, "SELECT * FROM `product_shop`");
     $comment = mysqli_query($induction, "SELECT * FROM `comments`");
+    $com = "SELECT * FROM `comments`";
 ?>
 
 <head>
@@ -22,28 +24,56 @@
 <body>
     <header>
         <div class="menu__block">
-            <div class="menu">
+            <div class="menu__block-1">
                 <div class="menu__logo">
-                    <img src="style/img/logo.png" alt="" class="menu__logo__png">
+                    <span class="menu__logo__text">Мебель</span>
                 </div>
-                <ul class="menu__list">
-                    <li class="menu__item"><a href="#au" class="menu__link">О нас</a></li>
-                    <li class="menu__item"><a href="#prod" class="menu__link">Товары</a></li>
-                    <li class="menu__item"><a href="#contact" class="menu__link">Связь</a></li>
-                    <li class="menu__item"><a href="#adres" class="menu__link">Адрес</a></li>
+                <div class="menu__btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="menu-prim">
+                <div class="menu-prim__logo">
+                    <img src="style/img/logo.png" alt="" class="menu-prim__logo__png">
+                </div>
+                <ul class="menu-prim__list">
+                    <li class="menu-prim__item"><a href="#au" class="menu-prim__link">О нас</a></li>
+                    <li class="menu-prim__item"><a href="#prod" class="menu-prim__link">Товары</a></li>
+                    <li class="menu-prim__item"><a href="#contact" class="menu-prim__link">Связь</a></li>
+                    <li class="menu-prim__item"><a href="#adres" class="menu-prim__link">Адрес</a></li>
+                </ul>
+                <div class="menu-prim__basket">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path
+                            d="M171.7 191.1H404.3L322.7 35.07C316.6 23.31 321.2 8.821 332.9 2.706C344.7-3.409 359.2 1.167 365.3 12.93L458.4 191.1H544C561.7 191.1 576 206.3 576 223.1C576 241.7 561.7 255.1 544 255.1L492.1 463.5C484.1 492 459.4 512 430 512H145.1C116.6 512 91 492 83.88 463.5L32 255.1C14.33 255.1 0 241.7 0 223.1C0 206.3 14.33 191.1 32 191.1H117.6L210.7 12.93C216.8 1.167 231.3-3.409 243.1 2.706C254.8 8.821 259.4 23.31 253.3 35.07L171.7 191.1zM191.1 303.1C191.1 295.1 184.8 287.1 175.1 287.1C167.2 287.1 159.1 295.1 159.1 303.1V399.1C159.1 408.8 167.2 415.1 175.1 415.1C184.8 415.1 191.1 408.8 191.1 399.1V303.1zM271.1 303.1V399.1C271.1 408.8 279.2 415.1 287.1 415.1C296.8 415.1 304 408.8 304 399.1V303.1C304 295.1 296.8 287.1 287.1 287.1C279.2 287.1 271.1 295.1 271.1 303.1zM416 303.1C416 295.1 408.8 287.1 400 287.1C391.2 287.1 384 295.1 384 303.1V399.1C384 408.8 391.2 415.1 400 415.1C408.8 415.1 416 408.8 416 399.1V303.1z" />
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="menu-btn">
+                <div class="menu-btn__button">
+                    <span class="menu-btn__button__text">Закрыть меню</span>
+                </div>
+                <div class="menu-btn__basket">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path
+                            d="M171.7 191.1H404.3L322.7 35.07C316.6 23.31 321.2 8.821 332.9 2.706C344.7-3.409 359.2 1.167 365.3 12.93L458.4 191.1H544C561.7 191.1 576 206.3 576 223.1C576 241.7 561.7 255.1 544 255.1L492.1 463.5C484.1 492 459.4 512 430 512H145.1C116.6 512 91 492 83.88 463.5L32 255.1C14.33 255.1 0 241.7 0 223.1C0 206.3 14.33 191.1 32 191.1H117.6L210.7 12.93C216.8 1.167 231.3-3.409 243.1 2.706C254.8 8.821 259.4 23.31 253.3 35.07L171.7 191.1zM191.1 303.1C191.1 295.1 184.8 287.1 175.1 287.1C167.2 287.1 159.1 295.1 159.1 303.1V399.1C159.1 408.8 167.2 415.1 175.1 415.1C184.8 415.1 191.1 408.8 191.1 399.1V303.1zM271.1 303.1V399.1C271.1 408.8 279.2 415.1 287.1 415.1C296.8 415.1 304 408.8 304 399.1V303.1C304 295.1 296.8 287.1 287.1 287.1C279.2 287.1 271.1 295.1 271.1 303.1zM416 303.1C416 295.1 408.8 287.1 400 287.1C391.2 287.1 384 295.1 384 303.1V399.1C384 408.8 391.2 415.1 400 415.1C408.8 415.1 416 408.8 416 399.1V303.1z" />
+                    </svg>
+                </div>
+                <ul class="menu-btn__list">
+                    <li class="menu-btn__item"><a href="#au" class="menu-btn__link">О нас</a></li>
+                    <li class="menu-btn__item"><a href="#prod" class="menu-btn__link">Товары</a></li>
+                    <li class="menu-btn__item"><a href="#contact" class="menu-btn__link">Связь</a></li>
+                    <li class="menu-btn__item"><a href="#adres" class="menu-btn__link">Адрес</a></li>
                 </ul>
             </div>
-            <div class="menu__basket">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                    <path
-                        d="M171.7 191.1H404.3L322.7 35.07C316.6 23.31 321.2 8.821 332.9 2.706C344.7-3.409 359.2 1.167 365.3 12.93L458.4 191.1H544C561.7 191.1 576 206.3 576 223.1C576 241.7 561.7 255.1 544 255.1L492.1 463.5C484.1 492 459.4 512 430 512H145.1C116.6 512 91 492 83.88 463.5L32 255.1C14.33 255.1 0 241.7 0 223.1C0 206.3 14.33 191.1 32 191.1H117.6L210.7 12.93C216.8 1.167 231.3-3.409 243.1 2.706C254.8 8.821 259.4 23.31 253.3 35.07L171.7 191.1zM191.1 303.1C191.1 295.1 184.8 287.1 175.1 287.1C167.2 287.1 159.1 295.1 159.1 303.1V399.1C159.1 408.8 167.2 415.1 175.1 415.1C184.8 415.1 191.1 408.8 191.1 399.1V303.1zM271.1 303.1V399.1C271.1 408.8 279.2 415.1 287.1 415.1C296.8 415.1 304 408.8 304 399.1V303.1C304 295.1 296.8 287.1 287.1 287.1C279.2 287.1 271.1 295.1 271.1 303.1zM416 303.1C416 295.1 408.8 287.1 400 287.1C391.2 287.1 384 295.1 384 303.1V399.1C384 408.8 391.2 415.1 400 415.1C408.8 415.1 416 408.8 416 399.1V303.1z" />
-                </svg>
-        </div>
         </div>
     </header>
     <section class="hero" id = "au">
-        <div class="hero__block">
-            <div class="hero__filter">
+        <div class="hero__filter">
+            <div class="hero__block">
                 <div class="hero__description">
                     <div class="hero__title">
                         <h2>О нас</h2>
@@ -87,7 +117,7 @@
             </div>
             <div class="positive-list__border">
                 <div class="positive-list__item">
-                    <div class="positive-list__icon" style="width: 100px; height: 80px">
+                    <div class="positive-list__icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
                             <path
                                 d="M368 0C394.5 0 416 21.49 416 48V96H466.7C483.7 96 499.1 102.7 512 114.7L589.3 192C601.3 204 608 220.3 608 237.3V352C625.7 352 640 366.3 640 384C640 401.7 625.7 416 608 416H576C576 469 533 512 480 512C426.1 512 384 469 384 416H256C256 469 213 512 160 512C106.1 512 64 469 64 416H48C21.49 416 0 394.5 0 368V48C0 21.49 21.49 0 48 0H368zM416 160V256H544V237.3L466.7 160H416zM160 368C133.5 368 112 389.5 112 416C112 442.5 133.5 464 160 464C186.5 464 208 442.5 208 416C208 389.5 186.5 368 160 368zM480 464C506.5 464 528 442.5 528 416C528 389.5 506.5 368 480 368C453.5 368 432 389.5 432 416C432 442.5 453.5 464 480 464z" />
@@ -131,56 +161,80 @@
                     
             ?>
             <div class="shop__product">
-                <div class="shop__product__title">
-                    <h2><?php echo $product['name'];?></h2>
+                <div class="shop__product__block-1">
+                    <div class="shop__product__title">
+                        <h2><?php echo $product['name'];?></h2>
+                    </div>
+                    <div class="shop__product__icon" style = "background-image: url('<?php echo $product['photo_product'];?>')">
                 </div>
-                <div class="shop__product__icon" style = "background-image: url('<?php echo $product['photo_product'];?>')">
                 </div>
-                <div class="shop__product__counter">
-                    <input type="button" value=" - " class="shop__product__counter__neg">
-                    <input type="number" data-max-value = "<?php echo $product['all_quantity']?>" name="" value="0" id="" readonly="readonly" class="shop__product__counter__value">
-                    <input type="button" value="+" class="shop__product__counter__pos">
+                    <div class="shop__product__block-2">
+                        <div class="shop__product__counter">
+                            <input type="button" value=" - " class="shop__product__counter__neg">
+                            <input type="number" data-id = "<?php echo $product['id']?>" data-max-value = "<?php echo $product['all_quantity']?>" name="" value="0" id="" readonly="readonly" class="shop__product__counter__value">
+                            <input type="button" value="+" class="shop__product__counter__pos">
+                        </div>
+                        <div class="shop__product__price">
+                            <span><?php echo $product['price'];?></span>
+                        </div>
+                        <input type="button" value="Добавить в корзину" name="buyProduct" class="shop__product__get-mb">
+                    </div>
+                    <input type="button" value="Добавить в корзину" name="buyProduct" class="shop__product__get-dt">
                 </div>
-                <div class="shop__product__price">
-                    <span><?php echo $product['price'];?></span>
-                </div>
-                <input type="button" value="Добавить в корзину" class="shop__product__get">
-            </div>
             <?php }?>
         </div>
     </section>
     <section class="contact" id = "contact">
-        <div class="contact__block">
-            <div class="contact__titile">
-                <h2>Оставьте свой отзыв</h2>
-            </div>
-            <form action="" method="post">
-                <div class="contact__form__name">
-                    <span class="contact__form__title">Имя</span>
-                    <input type="text" class="contact__form__input">
-                </div>
-                <div class="contact__form__text">
-                    <span class="contact__form__title">Ваш комментарий</span>
-                    <textarea name="" id="" cols="30" rows="10" class="contact__form__textarea"></textarea>
-                </div>
-                <input type="button" value="Отправить" class = "contact__btn">
-            </form>
+        <div class="contact__titile">
+            <h2>Оставьте свой отзыв</h2>
         </div>
-        <div class="comment__block">
-            <?php
-                    while ($comment__arr = mysqli_fetch_assoc($comment)){
-                        
-                ?>
-            <div class="comment">
-                <div class="comment__avatar">
-                    <span class="comment__avatar__name"><?php echo $comment__arr['name']?></span>
-                    <img src="<?php echo $comment__arr['photo']?>" alt="" class="comment__avatar__photo">
-                </div>
-                <p class="comment__text">
-                <?php echo $comment__arr['comment']?>
-                </p>
+        <div class="contact__container">
+            <div class="contact__block">
+                <form action="" method="post" class = "contact__form">
+                    <div class="contact__form__name">
+                        <span class="contact__form__title">Имя</span>
+                        <input type="text" class="contact__form__input">
+                    </div>
+                    <div class="contact__form__text">
+                        <span class="contact__form__title">Ваш комментарий</span>
+                        <textarea name="" id="" cols="30" rows="10" class="contact__form__textarea"></textarea>
+                    </div>
+                    <input type="button" value="Отправить" class = "contact__btn">
+                </form>
             </div>
-            <?php } ?>
+            <div class="comment__block">
+                <?php
+                        while ($comment__arr = mysqli_fetch_assoc($comment)){
+                            
+                    ?>
+                <div class="comment">
+                    <div class="comment__avatar">
+                        <span class="comment__avatar__name"><?php echo $comment__arr['name']?></span>
+                        <img src="<?php echo $comment__arr['photo']?>" alt="" class="comment__avatar__photo">
+                    </div>
+                    <p class="comment__text">
+                    <?php echo $comment__arr['comment']?>
+                    </p>
+                </div>
+                <?php } ?>
+            </div>
+            
+            <div id="slider" class="comment__carusel" data-bs-ride="carousel">
+                    <?php
+                        $res = $induction->query($com);
+                        foreach ($res as $arr) {
+                        ?>
+                            <div class="comment comment__carusel__item" data-bs-interval="3000">
+                                <div class="comment__avatar">
+                                    <span class="comment__avatar__name"><?php echo $arr['name']?></span>
+                                    <img src="<?php echo $arr['photo']?>" alt="" class="comment__avatar__photo">
+                                </div>
+                                <p class="comment__text">
+                                <?php echo $arr['comment']?>
+                                </p>
+                            </div>
+                    <?php } ?>
+            </div>
         </div>
     </section>
     <section class="adress" id = "adres">
@@ -219,6 +273,7 @@
     </section>
     <script src="js/_menu.js"></script>
     <script src="js/_shop.js"></script>
+    <script src="js/_contact.js"></script>
 </body>
 
 </html>

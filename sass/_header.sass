@@ -1,61 +1,130 @@
 @import "variables"
 .menu
-    display: flex
-    align-items: center
-    justify-content: space-between
-    width: 85%
-    margin: auto
-    &__item
-        display: flex
-        align-items: center
-        justify-content: center
-        width: 100%
-        height: 100%
+    &__block-1
+        display: none
+    &__btn
+        cursor: pointer
+        &>svg
+            width: 35px
+            height: 35px
+            fill: $dark
+    &__logo
+        cursor: pointer
+        &__text
+            font-size: 30px
+            font-family: $fontFamily
+            color: $dark
+            user-select: none
+
     &__block
-        box-sizing: content-box
+        box-sizing: border-box
         top: 0
         display: flex
         justify-content: space-between
         align-items: end
         width: 100%
         position: fixed
+        z-index: 4
         background-color: $light
-    &__logo
-        width: 88px
-        height: 88px
-        &__png
+    &-btn
+        display: none
+        width: 100%
+        &__basket
+            width: 70px
+            justify-self: flex-end
+            padding: 5px
+            display: flex
+            justify-content: center
+            align-self: center
+            height: 70px
+            margin: auto
+            border: 3px solid $dark
+            border-radius: 50%
+            &>svg
+                fill: $dark
+                width: 70px
+        &__list
+            width: 100%
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            height: 88px
+            list-style: none
+            font-family: $fontFamily
+            margin: 0
+            padding-inline: 0
+            margin-block: 0
+            margin-top: 20px
+        &__link
+            color: $dark
+            text-decoration: none
+            display: block
+            font-size: 20px
+        &__item
+            display: flex
+            align-items: center
+            justify-content: center
             width: 100%
             height: 100%
-    &__list
-        height: 88px
-        width: 35%
+        &__button
+            display: flex
+            justify-content: center
+            padding: 15px
+            margin-bottom: 15px
+            border: 3px solid $dark
+            cursor: pointer
+            &__text
+                font-size: 25px
+                color: $dark
+                font-family: $fontFamily
+                text-align: center
+                user-select: none
+    &-prim
         display: flex
-        justify-content: space-around
         align-items: center
-        list-style: none
-        font-family: $fontFamily
-        font-size: 19px
-        margin: 0
-        padding-inline: 0
-    &__link
-        color: $dark
-        text-decoration: none
-        display: block
-        // &:hover
-        //     background-color: rgb(196, 180, 167)
-
-    &__basket
-        padding: 5px
-        border: 3px solid $dark
-        border-radius: 50%
-        display: flex
-        justify-content: center
-        align-self: center
-        height: 45px
-        margin-right: 50px
-        &>svg
-            fill: $dark
-            width: 45px
+        justify-content: space-between
+        width: 1200px
+        margin: auto
+        box-sizing: border-box
+        &__item
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 100%
+            height: 100%
+        &__logo
+            width: 88px
+            height: 88px
+            &__png
+                width: 100%
+                height: 100%
+        &__list
+            height: 88px
+            width: 35%
+            display: flex
+            justify-content: space-around
+            align-items: center
+            list-style: none
+            font-family: $fontFamily
+            font-size: 19px
+            margin: 0
+            padding-inline: 0
+        &__link
+            color: $dark
+            text-decoration: none
+            display: block
+        &__basket
+            justify-self: flex-end
+            padding: 5px
+            border: 3px solid $dark
+            border-radius: 50%
+            display: flex
+            justify-content: center
+            align-self: center
+            height: 45px
+            &>svg
+                fill: $dark
+                width: 45px
 
 header
     background-color: $light
