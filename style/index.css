@@ -457,6 +457,7 @@ header {
   border-radius: 20px;
   padding: 30px;
   color: #5A3F2E;
+  user-select: none;
 }
 .comment__block {
   box-sizing: border-box;
@@ -480,6 +481,10 @@ header {
 .comment__text {
   text-align: justify;
   text-indent: 5%;
+  position: relative;
+}
+.comment__text__hidden {
+  opacity: 0;
 }
 .comment__carusel {
   display: none;
@@ -488,7 +493,29 @@ header {
 }
 .comment__carusel__item {
   width: 100%;
+}
+.comment__carusel__block {
   position: absolute;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.comment__full-com {
+  position: absolute;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: #5A3F2E;
+  color: #F3F6FB;
+  padding: 5px;
+  border: 2px solid #5A3F2E;
+  transition-duration: 0.3s;
+  transition-property: color, background-color;
+}
+.comment__full-com:hover {
+  background-color: #F3F6FB;
+  color: #5A3F2E;
 }
 
 .adress {
@@ -1023,6 +1050,9 @@ header {
   }
   .comment__carusel {
     display: flex;
+  }
+  .contact {
+    padding: 0;
   }
   .contact__block {
     width: 540px;

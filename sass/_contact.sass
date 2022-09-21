@@ -71,6 +71,7 @@
     border-radius: 20px
     padding: 30px
     color: $dark
+    user-select: none
     &__block
         box-sizing: border-box
     &__avatar
@@ -89,10 +90,32 @@
     &__text
         text-align: justify
         text-indent: 5%
+        position: relative
+        &__hidden
+            opacity: 0
     &__carusel
         display: none
         position: relative
         height: 300px
         &__item
             width: 100%
+        &__block
             position: absolute
+            margin: auto
+            display: flex
+            justify-content: center
+    &__full-com
+        position: absolute
+        font-size: 15px
+        font-weight: 600
+        cursor: pointer
+        border-radius: 20px
+        background-color: $dark
+        color: $light
+        padding: 5px
+        border: 2px solid $dark
+        transition-duration: .3s
+        transition-property: color, background-color
+        &:hover
+            background-color: $light
+            color: $dark

@@ -224,14 +224,16 @@
                         $res = $induction->query($com);
                         foreach ($res as $arr) {
                         ?>
-                            <div class="comment comment__carusel__item" data-bs-interval="3000">
-                                <div class="comment__avatar">
-                                    <span class="comment__avatar__name"><?php echo $arr['name']?></span>
-                                    <img src="<?php echo $arr['photo']?>" alt="" class="comment__avatar__photo">
+                            <div class="comment__carusel__block">
+                                <div class="comment comment__carusel__item" data-bs-interval="3000">
+                                    <div class="comment__avatar">
+                                        <span class="comment__avatar__name"><?php echo $arr['name']?></span>
+                                        <img src="<?php echo $arr['photo']?>" alt="" class="comment__avatar__photo">
+                                    </div>
+                                    <p class="comment__text">
+                                    <?php echo $arr['comment']?>
+                                    </p>
                                 </div>
-                                <p class="comment__text">
-                                <?php echo $arr['comment']?>
-                                </p>
                             </div>
                     <?php } ?>
             </div>
